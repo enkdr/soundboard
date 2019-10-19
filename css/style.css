@@ -1,0 +1,59 @@
+html, body {
+    /* -webkit-app-region: drag; */
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#app {
+    margin: 6px auto;
+    width: 400px;
+    border: 1px solid orange;
+}
+
+#app h3 {
+    padding: 6px 0;
+    text-align: center;
+    background: #eee;
+}
+
+.board {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #eee;
+}
+
+.pad {
+    /* -webkit-app-region: no-drag; */
+    background: #fff;
+    margin: 4px;
+    flex-basis: 10%;
+    height: 40px;
+    border: 1px solid grey;
+}
+
+input[type="range"] {
+    transform: rotateZ(270deg);
+}
