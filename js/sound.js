@@ -1,6 +1,7 @@
 'use strict';
 
 var pad = document.querySelectorAll('.pad');
+var heading = document.querySelector('.heading');
 
 for (var i = 0; i < pad.length; i++) {
     var p = pad[i];
@@ -16,3 +17,17 @@ function prepareButton(buttonEl, soundName) {
         audio.play();
     });
 }
+
+heading.addEventListener('click', function(e) {
+    toggleFullScreen();
+  }, false);
+
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen(); 
+      }
+    }
+  }  
